@@ -1,36 +1,43 @@
 #include "Account.hpp"
 #include <iostream>
 
+Account::Account(std::string _accountNumber, std::string _holderIndividualRegistration, std::string _holderName) {
+	setAccountNumber(_accountNumber);
+	setHolderIndividualRegistration(_holderIndividualRegistration);
+	setHolderName(_holderName);
+	this->bankStatement = 0;
+};
+
 /*GETTERS*/
 std::string Account::getAccountNumber() const {
-	return accountNumber;
+	return this->accountNumber;
 }
 
 std::string Account::getHolderIndividualRegistration() const {
-	return holderIndividualRegistration;
+	return this->holderIndividualRegistration;
 }
 
 std::string Account::getHolderName() const {
-	return holderName;
+	return this->holderName;
 }
 
 float Account::getBankStatement() const {
-	return bankStatement;
+	return this->bankStatement;
 }
 
 /*SETTERS*/
 void Account::setAccountNumber(const std::string _accountNumber) {
-	accountNumber = _accountNumber;
+	this->accountNumber = _accountNumber;
 	return;
 }
 
 void Account::setHolderIndividualRegistration(const std::string _holderIndividualRegistration) {
-	holderIndividualRegistration = _holderIndividualRegistration;
+	this->holderIndividualRegistration = _holderIndividualRegistration;
 	return;
 }
 
 void Account::setHolderName(const std::string _holderName) {
-	holderName = _holderName;
+	this->holderName = _holderName;
 	return;
 }
 
@@ -46,7 +53,7 @@ void Account::withdraw(const float _amountToWithdraw) {
 		return;
 	}
 
-	bankStatement -= _amountToWithdraw;
+	this->bankStatement -= _amountToWithdraw;
 }
 
 void Account::deposit(const float _amountToDeposit) {
@@ -55,5 +62,5 @@ void Account::deposit(const float _amountToDeposit) {
 		return;
 	}
 
-	bankStatement += _amountToDeposit;
+	this->bankStatement += _amountToDeposit;
 }

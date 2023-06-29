@@ -34,11 +34,6 @@ void Account::setHolderName(std::string _holderName) {
 	return;
 }
 
-void Account::setBankStatement(float _bankStatement) {
-	bankStatement += _bankStatement;
-	return;
-}
-
 /*METHODS*/
 void Account::withdraw(float _amountToWithdraw) {
 	if (_amountToWithdraw < 0) {

@@ -19,7 +19,6 @@ class Account {
   void setAccountNumber(std::string _accountNumber);
   void setHolderIndividualRegistration(std::string _holderIndividualRegistration);
   void setHolderName(std::string _holderName);
-  void setBankStatement(float _bankStatement);
   
   /*METHODS*/
   void withdraw(float valorASacar);

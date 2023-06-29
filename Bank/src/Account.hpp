@@ -10,17 +10,17 @@ class Account {
 
   public:
   /*GETTERS*/
-  std::string getAccountNumber();
-  std::string getHolderIndividualRegistration();
-  std::string getHolderName();
-  float getBankStatement();
+  std::string getAccountNumber() const;
+  std::string getHolderIndividualRegistration() const;
+  std::string getHolderName() const;
+  float getBankStatement() const;
   
   /*SETTERS*/
-  void setAccountNumber(std::string _accountNumber);
-  void setHolderIndividualRegistration(std::string _holderIndividualRegistration);
-  void setHolderName(std::string _holderName);
+  void setAccountNumber(const std::string _accountNumber);
+  void setHolderIndividualRegistration(const std::string _holderIndividualRegistration);
+  void setHolderName(const std::string _holderName);
   
   /*METHODS*/
-  void withdraw(float valorASacar);
-  void deposit(float valorADepositar);
+  void withdraw(const float _amountToWithdraw);
+  void deposit(const float _amountToDeposit);
 };

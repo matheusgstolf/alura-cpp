@@ -6,7 +6,8 @@ class Account {
   std::string accountNumber;
   std::string holderIndividualRegistration;
   std::string holderName;
-  float bankStatement = 0.0;
+  float bankStatement;
+  static int totalAccounts;
 
   /*SETTERS*/
   void setAccountNumber(const std::string _accountNumber);
@@ -20,6 +21,7 @@ class Account {
   std::string getHolderIndividualRegistration() const;
   std::string getHolderName() const;
   float getBankStatement() const;
+  static int getTotalAccounts();
 
   /*METHODS*/
   void withdraw(const float _amountToWithdraw);

@@ -12,6 +12,7 @@ int main() {
 
   account1.withdraw(50.0);
   account2.deposit(500.0);
-  cout << "Account 1:" << account1.getBankStatement() << " - Account 2:" << account2.getBankStatement() << endl; 
+  cout << "Account 1:" << account1.getBankStatement() << " - Account 2:" << account2.getBankStatement() << endl;
+  cout << "Total Accounts: " << Account::getTotalAccounts() << endl;
   exit(0);
 }

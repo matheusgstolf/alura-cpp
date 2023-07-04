@@ -1,11 +1,14 @@
 #include "Account.hpp"
 #include <iostream>
 
+int Account::totalAccounts = 0;
+
 Account::Account(std::string _accountNumber, std::string _holderIndividualRegistration, std::string _holderName) {
 	setAccountNumber(_accountNumber);
 	setHolderIndividualRegistration(_holderIndividualRegistration);
 	setHolderName(_holderName);
 	this->bankStatement = 0;
+	totalAccounts++;
 };
 
 /*GETTERS*/
@@ -23,6 +26,10 @@ std::string Account::getHolderName() const {
 
 float Account::getBankStatement() const {
 	return this->bankStatement;
+}
+
+int Account::getTotalAccounts() {
+	return totalAccounts;
 }
 
 /*SETTERS*/

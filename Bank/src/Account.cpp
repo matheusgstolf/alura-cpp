@@ -11,6 +11,10 @@ Account::Account(std::string _accountNumber, std::string _holderIndividualRegist
 	totalAccounts++;
 };
 
+Account::~Account() {
+	totalAccounts--;
+}
+
 /*GETTERS*/
 std::string Account::getAccountNumber() const {
 	return this->accountNumber;
@@ -44,6 +48,11 @@ void Account::setHolderIndividualRegistration(const std::string _holderIndividua
 }
 
 void Account::setHolderName(const std::string _holderName) {
+	if (_holderName.size() < 5) {
+		std::cout << "The name does not have enough characters" << std::endl;
+		exit(1);
+	}  
+	
 	this->holderName = _holderName;
 	return;
 }

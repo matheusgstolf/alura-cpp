@@ -16,6 +16,7 @@ class Account {
 
   public:
   Account(std::string _accountNumber, std::string _holderIndividualRegistration, std::string _holderName);
+  ~Account();
   /*GETTERS*/
   std::string getAccountNumber() const;
   std::string getHolderIndividualRegistration() const;
